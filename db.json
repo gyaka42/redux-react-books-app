@@ -1,0 +1,88 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "Zamanın Farkında",
+      "author": "şule gürbüz",
+      "publisher": "iletişim",
+      "price": 70,
+      "isbn": "9789750509292",
+      "categoryId": "2"
+    },
+    {
+      "id": "1678547295107",
+      "title": "Kararı Ben Veririm",
+      "author": "Esra Ezmeci",
+      "publisher": "Destek Yayınları",
+      "price": "46.80",
+      "isbn": "9786053118602",
+      "categoryId": "3"
+    },
+    {
+      "id": "1678547519547",
+      "title": "Aşka Özür Diletmem",
+      "author": "Dilek Görmez",
+      "publisher": "İnkılap Kitabevi",
+      "price": "34.60",
+      "isbn": "9789751043979",
+      "categoryId": "1"
+    },
+    {
+      "id": "1678547699858",
+      "title": "Uykusu Gelmeyen Porsuk",
+      "author": "Constanze Von Kitzing",
+      "publisher": "İş Bankası Kültür Yayınları",
+      "price": "16.80",
+      "isbn": "9786254050749",
+      "categoryId": "1"
+    },
+    {
+      "id": "1678547798885",
+      "title": "Sokrates'in Savunması",
+      "author": "Platon",
+      "publisher": "İş Bankası Kültür Yayınları ",
+      "price": "19.20",
+      "isbn": "9786053607021",
+      "categoryId": "5"
+    },
+    {
+      "id": "1678547891562",
+      "title": "Sırlarımız Kadar Hastayız",
+      "author": "Bülent Demircioğlu",
+      "publisher": "Destek Yayınları",
+      "price": "58.80",
+      "isbn": "9786254415418",
+      "categoryId": "7"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "roman"
+    },
+    {
+      "id": "2",
+      "name": "hikaye"
+    },
+    {
+      "id": "3",
+      "name": "bilim"
+    },
+    {
+      "id": "4",
+      "name": "edebiyat"
+    },
+    {
+      "id": "5",
+      "name": "felsefe"
+    },
+    {
+      "id": "6",
+      "name": "mizah"
+    },
+    {
+      "id": "7",
+      "name": "egitim"
+    }
+  ]
+}

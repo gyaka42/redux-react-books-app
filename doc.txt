@@ -1,0 +1,47 @@
+Library App:
+
+A. Uygulamanın Amacı:
+    Kitapların kategorilerine göre ayrılarak kayıt altına alınmasını
+    sağlayacak bir uygulama olacaktır. Uygulamada hem kitaplar için hem
+    de kategorileri için CRUD (Create-Read-Update-Delete) işlemleri
+    yapılabilecektir.
+
+B. İş Sırası:
+
+    1. Dependencies:
+        - Json-server
+        - axios
+        - redux, react-redux
+        - UI kütüphanesi olarak bootstrap kullanılacak.
+        - react-router-dom
+    2. Veri yapısının ve json-server yapısının kurulması:
+    3. Redux altyapısının kurulması:
+        - !!!! Store'da bulunacak state'lere karar vermek (daha sonradan
+        da ekleme yapılabilir) (booksState, categoriesState)
+    4. Router yapısının kurulması
+    5. Uygulama açılırken redux içerisindeki stateleri doldurmak.
+
+    6. AddBook senaryosu:
+        - Bu sayfanın amacı kullanıcıdan kitap bilgileri alıp,
+        server'a gönderip kaydettirmektir.
+        - Bunun için kitap bilgilerini alacak bir form'a ihtiyaç vardır.
+        - Alınan bilgiler server'a başarıyla kaydedildikten sonra AYNI ekleme
+        İŞLEMİ STORE'A DA YAPILMALIDIR
+
+
+
+
+NOTLAR:
+ -local state = component'ın sadece kendisi için geçerli olan durumların
+ saklandığı state (useState)
+ -global state = uygulama içerisindeki diğer componentların ortak olarak
+ kullanmak isteyecekleri stateler (store)
+
+ -override : ezmek, üzerine yazmak/ öncekini geçersiz kıl; benim yazdığımı
+ geçerli kıl
+
+ -Next Topics:
+    ->middleware, redux-thunk,logger
+    ->authantication, authorization
+    ->login/register sistemi nasıl işler, frontend tarafında nasıl yönetilir
+    ->token ne demektir (jwt)
