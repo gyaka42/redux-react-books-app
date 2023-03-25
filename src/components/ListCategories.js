@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
 import { upperFirstLetter2 } from "../utils/functions";
@@ -78,9 +79,13 @@ const ListCategories = () => {
                       >
                         Sil
                       </button>
-                      <button type="button" className="btn btn-warning btn-sm">
+                      <Link
+                        to={`/edit-category/${category.id}`}
+                        type="button"
+                        className="btn btn-warning btn-sm"
+                      >
                         Guncelle
-                      </button>
+                      </Link>
                     </div>
                   </td>
                 </tr>

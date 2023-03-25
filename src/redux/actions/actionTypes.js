@@ -14,9 +14,15 @@ const actionTypes = {
     GET_CATEGORIES_FAIL: "GET_CATEGORIES_FAIL",
     ADD_CATEGORY: "ADD_CATEGORY",
     DELETE_CATEGORY: "DELETE_CATEGORY",
+    EDIT_CATEGORY: "EDIT_CATEGORY",
   },
   themeActions: {
     CHANGE_THEME: "CHANGE_THEME",
+  },
+  loginActions: {
+    LOGIN_SUCCESS: "LOGIN_SUCCESS",
+    LOGIN_FAIL: "LOGIN_FAIL",
+    LOGOUT: "LOGOUT",
   },
 };
 

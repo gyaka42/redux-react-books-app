@@ -47,7 +47,7 @@ const booksReducer = (state = initialState, action) => {
       };
     case actionTypes.bookActions.EDIT_BOOK:
       const tempArr = [];
-      for (var i = 0; i < state.books.length; i++) {
+      for (let i = 0; i < state.books.length; i++) {
         if (state.books[i].id !== action.payload.id) {
           tempArr.push(state.books[i]);
         } else {

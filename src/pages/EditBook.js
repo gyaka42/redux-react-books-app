@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import Header from "../components/Header";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
+import Logout from "../components/Logout";
 
 import { useSelector, useDispatch } from "react-redux";
 import { upperFirstLetter2 } from "../utils/functions";
@@ -173,6 +174,7 @@ const EditBook = () => {
           </div>
         </form>
       </div>
+      <Logout />
     </div>
   );
 };

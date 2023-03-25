@@ -3,6 +3,7 @@ import React from "react";
 import Header from "../components/Header";
 import Button from "../components/Button";
 import ListCategories from "../components/ListCategories";
+import Logout from "../components/Logout";
 
 import { useSelector } from "react-redux";
 import { Navigate, useNavigate } from "react-router-dom";
@@ -26,6 +27,7 @@ const CategoriesHome = () => {
         </div>
         <ListCategories />
       </div>
+      <Logout />
     </div>
   );
 };

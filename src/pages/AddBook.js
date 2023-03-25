@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import { upperFirstLetter2 } from "../utils/functions";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import Logout from "../components/Logout";
 
 import api from "../api/api";
 import urls from "../api/urls";
@@ -171,6 +172,7 @@ const AddBook = () => {
         }}
         visible={openSuccessModal}
       />
+      <Logout />
     </div>
   );
 };

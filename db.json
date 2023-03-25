@@ -44,21 +44,12 @@
       "price": "19.20",
       "isbn": "9786053607021",
       "categoryId": "5"
-    },
-    {
-      "id": "1678547891562",
-      "title": "Sırlarımız Kadar Hastayız",
-      "author": "Bülent Demircioğlu",
-      "publisher": "Destek Yayınları",
-      "price": "58.80",
-      "isbn": "9786254415418",
-      "categoryId": "7"
     }
   ],
   "categories": [
     {
       "id": "1",
-      "name": "roman"
+      "name": "Roman"
     },
     {
       "id": "2",
@@ -70,7 +61,7 @@
     },
     {
       "id": "4",
-      "name": "edebiyat"
+      "name": "Edebiyat"
     },
     {
       "id": "5",
@@ -79,10 +70,6 @@
     {
       "id": "6",
       "name": "mizah"
-    },
-    {
-      "id": "7",
-      "name": "egitim"
     }
   ]
 }

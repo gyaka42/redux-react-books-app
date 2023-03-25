@@ -5,6 +5,7 @@ import Button from "../components/Button";
 import Header from "../components/Header";
 import ListBooks from "../components/ListBooks";
 import { useSelector } from "react-redux";
+import Logout from "../components/Logout";
 
 const Home = () => {
   const { themeState } = useSelector((state) => state);
@@ -25,6 +26,7 @@ const Home = () => {
         </div>
         <ListBooks />
       </div>
+      <Logout />
     </div>
   );
 };

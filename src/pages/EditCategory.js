@@ -1,32 +1,29 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
-import actionTypes from "../redux/actions/actionTypes";
-
+import { useParams, Navigate, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 import { upperFirstLetter2 } from "../utils/functions";
-import GeneralModel from "../components/GeneralModel";
 import Logout from "../components/Logout";
 
 import api from "../api/api";
 import urls from "../api/urls";
+import actionTypes from "../redux/actions/actionTypes";
 
-import { useSelector, useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
-
-const AddCategory = () => {
-  const navigate = useNavigate();
+const EditCategory = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { categoryId } = useParams();
   const { categoriesState } = useSelector((state) => state);
-  const [openSuccessModal, setOpenSuccessModal] = useState(false);
-  const [form, setForm] = useState({
-    id: String(new Date().getTime()),
-    name: "",
-  });
+  const myCategory = categoriesState.categories.find(
+    (item) => item.id === categoryId
+  );
+
+  const [form, setForm] = useState(myCategory);
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    /* Validation */
     if (!form.name) {
       setError(true);
       setErrorMessage("Kategori adi bos birakilamaz");
@@ -52,16 +49,16 @@ const AddCategory = () => {
       }, 2000);
     }
 
-    /* api call */
+    /* API CALL */
 
     api
-      .post(urls.categories, form)
+      .put(`${urls.categories}/${categoryId}`, form)
       .then((res) => {
         dispatch({
-          type: actionTypes.categoryActions.ADD_CATEGORY,
+          type: actionTypes.categoryActions.EDIT_CATEGORY,
           payload: form,
         });
-        setOpenSuccessModal(true);
+        navigate("/categories");
       })
       .catch((err) => {});
   };
@@ -80,7 +77,7 @@ const AddCategory = () => {
               className="form-control"
               id="name"
               placeholder="Orn: Bilim Kurgu"
-              value={form.name}
+              value={upperFirstLetter2(form.name)}
               onChange={(event) =>
                 setForm({ ...form, name: event.target.value })
               }
@@ -92,25 +89,25 @@ const AddCategory = () => {
             )}
           </div>
           <div className="d-flex justify-content-center my-5">
-            <button type="submit" className="btn btn-primary">
-              Kaydet
+            <button
+              disabled={
+                upperFirstLetter2(
+                  myCategory.name.trim().replaceAll(" ", "")
+                ) === upperFirstLetter2(form.name.trim().replaceAll(" ", ""))
+                  ? true
+                  : false
+              }
+              type="submit"
+              className="btn btn-primary"
+            >
+              Guncelle
             </button>
           </div>
         </form>
       </div>
-      <GeneralModel
-        title="Basarili"
-        content="Kategori basariyla eklendi"
-        cancelButtonText="Anasayfaya don"
-        cancelButtonType="success"
-        cancelButtonClick={() => {
-          navigate("/categories");
-        }}
-        visible={openSuccessModal}
-      />
       <Logout />
     </div>
   );
 };
 
-export default AddCategory;
+export default EditCategory;

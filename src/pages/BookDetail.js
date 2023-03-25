@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import { useParams, useNavigate } from "react-router-dom";
 import Price from "../components/Price";
+import Logout from "../components/Logout";
 
 import { useSelector } from "react-redux";
 import { upperFirstLetter2 } from "../utils/functions";
@@ -108,6 +109,7 @@ const BookDetail = () => {
           </div>
         </div>
       </div>
+      <Logout />
     </div>
   );
 };
